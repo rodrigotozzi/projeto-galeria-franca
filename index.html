@@ -8,6 +8,9 @@
 </head>
 <body>
     <h1>Galeria de Fotos Franca / SP</h1>
+    <div id="slideshow-container">
+        <img id="slideshow-image" src="" alt="Slideshow Image">
+    </div>
     <div class="galeria">
         <div class="imagem-container">
             <img src="imagem1.jpg" alt="Descrição da imagem 1" onclick="ampliarImagem('imagem1.jpg')">
@@ -40,6 +43,18 @@
     </div>
 
     <script>
+        const images = ["imagem1.jpg", "imagem2.jpg", "imagem3.jpg", "imagem4.jpg", "imagem5.jpg", "imagem6.jpg"];
+        let currentImageIndex = 0;
+
+        function changeSlide() {
+            const slideshowImage = document.getElementById("slideshow-image");
+            slideshowImage.src = images[currentImageIndex];
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+        }
+
+        setInterval(changeSlide, 10000); // Muda a imagem a cada 10 segundos
+        changeSlide(); // Exibe a primeira imagem imediatamente
+
         function ampliarImagem(src) {
             const imagemAmpliada = document.getElementById('imagemAmpliada');
             const imagemAmpliadaConteudo = document.getElementById('imagemAmpliadaConteudo');

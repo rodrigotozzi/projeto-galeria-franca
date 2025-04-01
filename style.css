@@ -13,6 +13,17 @@ h1 {
     color: #1e3a8a;
 }
 
+#slideshow-container { /* Estilos para o slideshow */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#slideshow-image {
+    max-width: 80%;
+    max-height: 400px;
+    object-fit: contain;
+}
+
 .galeria {
     display: flex;
     flex-wrap: wrap;
@@ -43,7 +54,7 @@ h1 {
 .descricao-imagem {
     margin-top: 5px;
     font-size: 0.9em;
-    color: #000000;
+    color: #555;
 }
 
 .imagem-ampliada {
