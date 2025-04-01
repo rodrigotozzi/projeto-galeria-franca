@@ -13,15 +13,17 @@ h1 {
     color: #1e3a8a;
 }
 
-#slideshow-container { /* Estilos para o slideshow */
+#slideshow-container {
     text-align: center;
     margin-bottom: 20px;
+    position: relative;
 }
 
 #slideshow-image {
     max-width: 80%;
     max-height: 400px;
     object-fit: contain;
+    border: 5px solid #a3c2f0;
 }
 
 .galeria {

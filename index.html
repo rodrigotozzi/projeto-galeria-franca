@@ -45,15 +45,15 @@
     <script>
         const images = ["imagens/imagem1.jpg", "imagens/imagem2.jpg", "imagens/imagem3.jpg", "imagens/imagem4.jpg", "imagens/imagem5.jpg", "imagem6.jpg"];
         let currentImageIndex = 0;
+        const slideshowImage = document.getElementById("slideshow-image");
 
         function changeSlide() {
-            const slideshowImage = document.getElementById("slideshow-image");
             slideshowImage.src = images[currentImageIndex];
             currentImageIndex = (currentImageIndex + 1) % images.length;
         }
 
-        setInterval(changeSlide, 10000); // Muda a imagem a cada 10 segundos
-        changeSlide(); // Exibe a primeira imagem imediatamente
+        setInterval(changeSlide, 10000);
+        changeSlide();
 
         function ampliarImagem(src) {
             const imagemAmpliada = document.getElementById('imagemAmpliada');
