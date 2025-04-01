@@ -4,6 +4,7 @@ body {
     padding: 20px;
     background: linear-gradient(to bottom, #e0f2fe, #1e3a8a);
     color: #1e3a8a;
+    min-height: 100vh;
 }
 
 h1 {
@@ -18,11 +19,17 @@ h1 {
     justify-content: center;
 }
 
+.imagem-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
 .galeria img {
     width: 300px;
     height: 200px;
     object-fit: cover;
-    margin: 10px;
     border: 5px solid #a3c2f0;
     box-shadow: 2px 2px 5px rgba(30, 58, 138, 0.2);
     transition: transform 0.3s ease;
@@ -31,6 +38,12 @@ h1 {
 
 .galeria img:hover {
     transform: scale(1.05);
+}
+
+.descricao-imagem {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #000000;
 }
 
 .imagem-ampliada {
